@@ -1,0 +1,32 @@
+{
+  "name": "jest-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cli": "webpack src/script/index.js --output-path ./public --output-filename bundle.js --mode=development --color --watch --module-bind=babel-loader",
+    "test": "jest --color --coverage",
+    "test-watch": "jest --watchAll --colors"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "babel-jest": "^26.5.2",
+    "jest": "^26.5.2"
+  }
+}
